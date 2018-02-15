@@ -1,0 +1,11 @@
+﻿
+#pragma kernel Patate
+
+RWTexture2D<float4> Result;
+
+[numthreads(8,8,1)]
+void Patate (uint3 id : SV_DispatchThreadID)
+{	
+	Result[id.xy] = float4(0,0,0,0);
+
+}
